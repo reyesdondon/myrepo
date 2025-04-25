@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../../base              # reference the base directory (relative path)
+
+patches:
+- path: deployment-patch.yaml   # apply the deployment patch
+- path: service-patch.yaml      # apply the service patch
+
